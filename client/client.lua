@@ -45,10 +45,10 @@ local function decreaseStatus(statusName, amountToDecrease)
 end
 
 exports("consume", function(data, _)
-    if Config.Items[data.name] then
+    if Config.Items[data.name] and Config.Items[data.name].statusOnUse then
         ox_inventory:useItem(data, function(cbData)
-            if not cbData or not next(Config.Items[data.name]) then return end
-            for status, amount in pairs(Config.Items[data.name]) do
+            if not cbData or not next(Config.Items[data.name].statusOnUse) then return end
+            for status, amount in pairs(Config.Items[data.name].statusOnUse) do
                 if amount > 0 then
                     increaseStatus(status, amount)
                 else
@@ -57,4 +57,8 @@ exports("consume", function(data, _)
             end
         end)
     end
+end)
+
+exports("addItem", function(itemToAdd)
+    if not type(itemToAdd) ~= "table" then return print("Error in type of passed parameter to exports[\"x-consumables\"]:addItem") end
 end)
