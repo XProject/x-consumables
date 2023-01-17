@@ -1,6 +1,4 @@
 ---@diagnostic disable: redefined-local
-local ox_inventory = exports["ox_inventory"]
-
 local x_status = GetResourceState("x-status"):find("start") and exports["x-status"] or nil
 
 local esx = GetResourceState("es_extended"):find("start") and true or nil

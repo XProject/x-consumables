@@ -5,9 +5,9 @@ Config.Debug = true
 Config.Items = {
     --[[
     ["NAME_OF_THE_ITEM"] = nil or {
-        statusOnUse = nil or { ["NAME_OF_THE_STATUS_1"] = PERCENTAGE => 1 | -1 | etc, ["NAME_OF_THE_STATUS_2"] = PERCENTAGE => 1 | -1 | etc, }
+        statusOnUse = nil or { ["NAME_OF_THE_STATUS_1"] = PERCENTAGE => 10 | -10 | etc, ["NAME_OF_THE_STATUS_2"] = PERCENTAGE => 10 | -10 | etc, }
         itemOnUse   = nil or { ["NAME_OF_ITEM_1"] = AMOUNT => 1 | -1 | etc, ["NAME_OF_ITEM_2"] = AMOUNT => 1 | -1 | etc, },
-        healthOnUse = nil or PERCENTAGE => 1 | -1 | etc
+        healthOnUse = nil or PERCENTAGE => 10 | -10 | etc
     }
     ]]
     -- shared

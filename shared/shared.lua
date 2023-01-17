@@ -1,3 +1,4 @@
+ox_inventory = exports["ox_inventory"]
 local currentResourceName = GetCurrentResourceName()
 
 exports("addItem", function(itemToAdd)
