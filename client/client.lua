@@ -34,7 +34,7 @@ local function decreaseStatus(statusName, amountToDecrease)
     end
 end
 
-exports("consume", function(data, _)
+exports("use", function(data, _)
     if Config.Items[data.name] then
         ox_inventory:useItem(data, function(cbData)
             if not cbData or not next(Config.Items[data.name].statusOnUse) or x_status then return end
