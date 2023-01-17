@@ -1,5 +1,7 @@
 Config = {}
 
+Config.Debug = true
+
 Config.Items = {
     --[[
     ["NAME_OF_THE_ITEM"] = nil or {
