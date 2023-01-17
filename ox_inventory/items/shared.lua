@@ -13,7 +13,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_baking_soda'] = {
@@ -27,7 +27,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_banana'] = {
@@ -43,7 +43,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_blueberry'] = {
@@ -58,7 +58,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_cheese_cheddar'] = {
@@ -73,7 +73,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_cheese_mozzarella'] = {
@@ -88,7 +88,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_cheese_parmesan'] = {
@@ -103,7 +103,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_chocolate'] = {
@@ -119,7 +119,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_coffee_bean'] = {
@@ -133,7 +133,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_cream'] = {
@@ -149,7 +149,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_cup_empty'] = {
@@ -163,7 +163,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_dough'] = {
@@ -177,7 +177,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_dough_floured'] = {
@@ -191,7 +191,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_egg'] = {
@@ -205,7 +205,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_flour'] = {
@@ -219,7 +219,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_glass_empty'] = {
@@ -233,7 +233,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_glass_water'] = {
@@ -249,7 +249,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_grape'] = {
@@ -264,7 +264,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_hand_mixer'] = {
@@ -278,7 +278,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_lemon'] = {
@@ -293,7 +293,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_lemonade'] = {
@@ -309,7 +309,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_lettuce'] = {
@@ -324,7 +324,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_lime'] = {
@@ -339,7 +339,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_mango'] = {
@@ -355,7 +355,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_marshmellow'] = {
@@ -370,7 +370,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_milk'] = {
@@ -386,7 +386,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_mushroom'] = {
@@ -401,7 +401,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_olive'] = {
@@ -416,7 +416,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_onion'] = {
@@ -431,7 +431,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_onion_sliced'] = {
@@ -446,7 +446,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_orange'] = {
@@ -462,7 +462,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_pickle'] = {
@@ -477,7 +477,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_pizza_sauce'] = {
@@ -491,7 +491,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_potato'] = {
@@ -505,7 +505,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_potato_sliced'] = {
@@ -519,7 +519,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_rolling_pin'] = {
@@ -533,7 +533,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_salt'] = {
@@ -549,7 +549,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_strawberry'] = {
@@ -564,7 +564,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_sugar'] = {
@@ -580,7 +580,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_tea'] = {
@@ -594,7 +594,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_tomato'] = {
@@ -610,7 +610,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_vanilla_bean'] = {
@@ -624,7 +624,7 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     ['x_wrap'] = {
@@ -634,13 +634,13 @@ return {
         consume = 1,
         client = {
             anim = 'x-eating',
-            prop = { model = `prop_food_burg2`, bone = 60309, pos = vec3(0.1, 0.00, -0.05), rot = vec3(180.0, 180.0, 90.0) },
+            prop = { model = `prop_food_burg2`, bone = 60309, pos = vec3(0.1, 0.0, -0.05), rot = vec3(180.0, 180.0, 90.0) },
             usetime = 10000,
             cancel = true,
             disable = {
                 combat = true
             },
-            export = 'x-restaurant.consume'
+            export = 'x-consumables.consume'
         }
     },
     -- Copy everything until the line above
