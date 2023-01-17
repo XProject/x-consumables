@@ -13,7 +13,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_baking_soda'] = {
@@ -27,7 +30,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_banana'] = {
@@ -43,7 +49,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_blueberry'] = {
@@ -58,7 +67,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_cheese_cheddar'] = {
@@ -73,7 +85,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_cheese_mozzarella'] = {
@@ -88,7 +103,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_cheese_parmesan'] = {
@@ -103,7 +121,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_chocolate'] = {
@@ -119,7 +140,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_coffee_bean'] = {
@@ -133,7 +157,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_cream'] = {
@@ -149,7 +176,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_cup_empty'] = {
@@ -163,7 +193,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_dough'] = {
@@ -177,7 +210,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_dough_floured'] = {
@@ -191,7 +227,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_egg'] = {
@@ -205,7 +244,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_flour'] = {
@@ -219,7 +261,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_glass_empty'] = {
@@ -233,7 +278,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_glass_water'] = {
@@ -249,7 +297,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_grape'] = {
@@ -264,7 +315,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_hand_mixer'] = {
@@ -278,7 +332,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_lemon'] = {
@@ -293,7 +350,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_lemonade'] = {
@@ -309,7 +369,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_lettuce'] = {
@@ -324,7 +387,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_lime'] = {
@@ -339,7 +405,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_mango'] = {
@@ -355,7 +424,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_marshmellow'] = {
@@ -370,7 +442,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_milk'] = {
@@ -386,7 +461,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_mushroom'] = {
@@ -401,7 +479,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_olive'] = {
@@ -416,7 +497,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_onion'] = {
@@ -431,7 +515,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_onion_sliced'] = {
@@ -446,7 +533,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_orange'] = {
@@ -462,7 +552,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_pickle'] = {
@@ -477,7 +570,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_pizza_sauce'] = {
@@ -491,7 +587,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_potato'] = {
@@ -505,7 +604,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_potato_sliced'] = {
@@ -519,7 +621,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_rolling_pin'] = {
@@ -533,7 +638,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_salt'] = {
@@ -549,7 +657,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_strawberry'] = {
@@ -564,7 +675,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_sugar'] = {
@@ -580,7 +694,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_tea'] = {
@@ -594,7 +711,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_tomato'] = {
@@ -610,7 +730,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_vanilla_bean'] = {
@@ -624,7 +747,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_wrap'] = {
@@ -640,7 +766,10 @@ return {
             disable = {
                 combat = true
             },
-            export = 'x-consumables.consume'
+            export = 'x-consumables.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     -- Copy everything until the line above
