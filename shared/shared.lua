@@ -2,7 +2,7 @@ ox_inventory = exports["ox_inventory"]
 x_status = (GetResourceState("x-status"):find("start") and (IsDuplicityVersion() and exports["x-status"]) or true) or nil
 local currentResourceName = GetCurrentResourceName()
 
-exports("addItem", function(itemToAdd)
+exports("add", function(itemToAdd)
     if not type(itemToAdd) ~= "table" then return print("Error in type of passed parameter to exports[\"x-consumables\"]:addItem") end
     local invokingResource = GetInvokingResource()
     for itemName, data in pairs(itemToAdd) do

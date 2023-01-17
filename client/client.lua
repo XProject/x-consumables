@@ -1,6 +1,4 @@
 ---@diagnostic disable: redefined-local
-
-
 local esx = GetResourceState("es_extended"):find("start") and true or nil
 local qb = GetResourceState("qb-core"):find("start") and true or nil
 
