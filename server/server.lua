@@ -1,6 +1,16 @@
 exports("consume", function(event, item, inventory, slot, data)
     if Config.Items[data.name] then
         if event == "usedItem" then
+            if Config.Items[data.name].statusOnUse and next(Config.Items[data.name].statusOnUse) and x_status then
+                for statusName, statusAmount in pairs(Config.Items[data.name].statusOnUse) do
+                    if statusAmount > 0 then
+                        x_status:increaseStatus(inventory.id, statusName, statusAmount, true)
+                    elseif statusAmount < 0 then
+                        x_status:decreaseStatus(inventory.id, statusName, -statusAmount, true)
+                    end
+                end
+            end
+
             if Config.Items[data.name].itemOnUse and next(Config.Items[data.name].itemOnUse) then
                 for itemName, itemAmount in pairs(Config.Items[data.name].itemOnUse) do
                     if itemAmount > 0 then
