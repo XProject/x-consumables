@@ -44,7 +44,8 @@ Config.Items = {
     ["x_flour"] = nil,
     ["x_glass_empty"] = nil,
     ["x_glass_water"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -0.5 }
+        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -0.5 },
+        itemOnUse = { ["x_glass_empty"] = 1 }
     },
     ["x_grape"] = {
         statusOnUse = { ["Hunger"] = 5, ["Thirst"] = 1, ["Stress"] = -0.5 }
@@ -109,126 +110,5 @@ Config.Items = {
     ["x_vanilla_bean"] = nil,
     ["x_wrap"] = {
         statusOnUse = { ["Hunger"] = 15, ["Stress"] = -0.5 }
-    },
-    
-    -- catcafe
-    ["x_bentobox"] = {
-        statusOnUse = { ["Hunger"] = 40, ["Stress"] = -1 }
-    },
-    ["x_boba"] = nil,
-    ["x_brownie_catcafe"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_brownie_catcafe_uncooked"] = nil,
-    ["x_coffee_iced_catcafe"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -1 }
-    },
-    ["x_cookie_catcafe"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_cookie_catcafe_uncooked"] = nil,
-    ["x_cupcake_catcafe"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_cupcake_catcafe_uncooked"] = nil,
-    ["x_donut_catcafe"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_donut_catcafe_uncooked"] = nil,
-    ["x_instant_noodles"] = {
-        statusOnUse = { ["Hunger"] = 30, ["Thirst"] = 10, ["Stress"] = -1 }
-    },
-    ["x_instant_noodles_uncooked"] = nil,
-    ["x_instant_rice"] = {
-        statusOnUse = { ["Hunger"] = 30, ["Stress"] = -1 }
-    },
-    ["x_instant_rice_uncooked"] = nil,
-    ["x_lolipop_catcafe"] = {
-        statusOnUse = { ["Hunger"] = 10, ["Stress"] = -1 }
-    },
-    ["x_matcha"] = nil,
-    ["x_menu_catcafe"] = nil,
-    ["x_mochi_blueberry"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_mochi_blueberry_uncooked"] = nil,
-    ["x_mochi_matcha"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_mochi_matcha_uncooked"] = nil,
-    ["x_mochi_orange"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_mochi_orange_uncooked"] = nil,
-    ["x_mochi_strawberry"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_mochi_strawberry_uncooked"] = nil,
-    ["x_neko_onigiri"] = {
-        statusOnUse = { ["Hunger"] = 40, ["Stress"] = -1 }
-    },
-    ["x_nori"] = nil,
-    ["x_paste_miso"] = nil,
-    ["x_pizza_kitty"] = {
-        statusOnUse = { ["Hunger"] = 40, ["Stress"] = -1 }
-    },
-    ["x_pizza_kitty_uncooked"] = nil,
-    ["x_purrito"] = {
-        statusOnUse = { ["Hunger"] = 40, ["Stress"] = -1 }
-    },
-    ["x_purrito_uncooked"] = nil,
-    ["x_ramen"] = {
-        statusOnUse = { ["Hunger"] = 30, ["Thirst"] = 10, ["Stress"] = -1 }
-    },
-    ["x_ricecake"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_sake"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -1 }
-    },
-    ["x_sandy_chocolate"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_sandy_chocolate_uncooked"] = nil,
-    ["x_sandy_vanilla"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_sandy_vanilla_uncooked"] = nil,
-    ["x_soup_miso"] = {
-        statusOnUse = { ["Hunger"] = 30, ["Thirst"] = 10, ["Stress"] = -1 }
-    },
-    ["x_soup_tofu"] = {
-        statusOnUse = { ["Hunger"] = 25, ["Thirst"] = 5, ["Stress"] = -1 }
-    },
-    ["x_strawberryroll_catcafe"] = {
-        statusOnUse = { ["Hunger"] = 20, ["Stress"] = -1 }
-    },
-    ["x_strawberryroll_catcafe_uncooked"] = nil,
-    ["x_sushi_catcafe"] = {
-        statusOnUse = { ["Hunger"] = 30, ["Stress"] = -1 }
-    },
-    ["x_tea_boba"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -1 }
-    },
-    ["x_tea_boba_blueberry"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -1 }
-    },
-    ["x_tea_boba_chocolate"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -1 }
-    },
-    ["x_tea_boba_matcha"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -1 }
-    },
-    ["x_tea_boba_strawberry"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -1 }
-    },
-    ["x_tea_iced_lemon_lime"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -1 }
-    },
-    ["x_tea_iced_orange"] = {
-        statusOnUse = { ["Thirst"] = 20, ["Stress"] = -1 }
-    },
-    ["x_tofu"] = {
-        statusOnUse = { ["Hunger"] = 5, ["Stress"] = -1 }
     },
 }

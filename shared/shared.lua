@@ -3,7 +3,7 @@ x_status = (GetResourceState("x-status"):find("start") and (IsDuplicityVersion()
 local currentResourceName = GetCurrentResourceName()
 
 exports("add", function(itemToAdd)
-    if not type(itemToAdd) ~= "table" then return print("Error in type of passed parameter to exports[\"x-consumables\"]:addItem") end
+    if type(itemToAdd) ~= "table" then return print("Error in type of passed parameter to exports[\"x-consumables\"]:addItem") end
     local invokingResource = GetInvokingResource()
     for itemName, data in pairs(itemToAdd) do
         if not Config.Items[itemName] then
