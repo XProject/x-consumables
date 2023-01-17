@@ -7,7 +7,7 @@ description "x-consumables"
 version "0.0.0"
 
 shared_scripts {
-    "config.lua"
+    "shared/*.lua"
 }
 
 server_scripts {
