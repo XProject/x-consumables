@@ -9,6 +9,7 @@ exports("addItem", function(itemToAdd)
         if not Config.Items[itemName] then
             data.resource = data.resource or invokingResource
             Config.Items[itemName] = data
+            if Config.Debug then print(("[%s]: Adding item %s to Config.Items table..."):format(currentResourceName:upper(), itemName)) end
         else
             if Config.Debug then print(("[%s]: Item %s already exists in Config.Items table, so it won't be overrided..."):format(currentResourceName:upper(), itemName)) end
         end
