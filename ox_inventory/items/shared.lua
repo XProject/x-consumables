@@ -6,13 +6,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `sf_prop_sf_apple_01b`, bone = 60309, pos = vec3(0.0, 0.015, -0.02), rot = vec3(-124.6964, -166.576, 8.4572) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -25,11 +18,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -42,13 +30,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `v_res_tre_banana`, bone = 60309, pos = vec3(0.0, -0.015, 0.0), rot = vec3(300.0, 90.0, 8.4572) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -61,12 +42,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -79,12 +54,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -97,12 +66,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -115,12 +78,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -133,13 +90,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `prop_choc_ego`, bone = 60309, pos = vec3(0.0, 0.0, 0.0), rot = vec3(300.0, 0.0, 0.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -152,11 +102,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -169,13 +114,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `prop_food_ketchup`, bone = 60309, pos = vec3(0.2, 0.0, 0.0), rot = vec3(0.0, -90.0, 0.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -188,11 +126,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -205,11 +138,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -222,11 +150,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -239,11 +162,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -256,11 +174,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -273,11 +186,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -290,13 +198,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-drinking',
-            prop = { model = `prop_tall_glass`, bone = 28422, pos = vec3(0.0, 0.0, -0.09), rot = vec3(0.0, 0.0, 130.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -309,12 +210,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -327,11 +222,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -344,12 +234,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -362,13 +246,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-drinking',
-            prop = { model = `prop_food_bs_juice03`, bone = 28422, pos = vec3(0.0, 0.0, -0.09), rot = vec3(0.0, 0.0, 130.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -381,12 +258,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -399,12 +270,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -417,13 +282,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `ng_proc_food_ornge1a`, bone = 60309, pos = vec3(0.02, -0.01, -0.05), rot = vec3(0.0, 0.0, 0.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -436,12 +294,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -454,13 +306,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-drinking',
-            prop = { model = `v_res_tt_milk`, bone = 28422, pos = vec3(0.02, 0.0, 0.0), rot = vec3(0.0, 0.0, 130.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -473,12 +318,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -491,12 +330,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -509,12 +342,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -527,12 +354,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -545,13 +366,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `ng_proc_food_ornge1a`, bone = 60309, pos = vec3(0.02, -0.01, -0.05), rot = vec3(0.0, 0.0, 0.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -564,12 +378,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -582,11 +390,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -599,11 +402,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -616,11 +414,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -633,11 +426,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -650,13 +438,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `prop_food_sugarjar`, bone = 60309, pos = vec3(0.15, 0.01, -0.01), rot = vec3(0.0, -90.0, 0.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -669,12 +450,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -687,13 +462,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `prop_food_sugarjar`, bone = 60309, pos = vec3(0.15, 0.01, -0.01), rot = vec3(0.0, -90.0, 0.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -706,11 +474,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -723,13 +486,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `ng_proc_food_ornge1a`, bone = 60309, pos = vec3(0.02, -0.01, -0.05), rot = vec3(0.0, 0.0, 0.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -742,11 +498,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
@@ -759,13 +510,6 @@ return {
         stack = true,
         consume = 1,
         client = {
-            anim = 'x-eating',
-            prop = { model = `prop_food_burg2`, bone = 60309, pos = vec3(0.1, 0.0, -0.05), rot = vec3(180.0, 180.0, 90.0) },
-            usetime = 10000,
-            cancel = true,
-            disable = {
-                combat = true
-            },
             export = 'x-consumables.use'
         },
         server = {
