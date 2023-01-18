@@ -6,7 +6,12 @@ game "gta5"
 description "x-consumables"
 version "0.0.0"
 
+dependencies {
+	"ox_lib",
+}
+
 shared_scripts {
+    "@ox_lib/init.lua",
     "shared/*.lua"
 }
 

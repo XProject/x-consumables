@@ -32,8 +32,32 @@ local function decreaseStatus(statusName, amountToDecrease)
     end
 end
 
+local function progress(data)
+    data = {
+        progressType = data.progressType,
+        duration = data.useTime or 10000,
+        label = ("%s %s"):format(Config.Locales.using, data.label),
+        position = "bottom",
+        useWhileDead = false,
+        allowRagdoll = false,
+        allowCuffed = false,
+        allowFalling = false,
+        canCancel = (data.canCancel == nil and true) or data.canCancel, -- so weird; it won't work properly if it's not written like this...
+        anim = data.anim,
+        prop = data.prop,
+        disable = data.disable
+    }
+    return data.progressType == "bar" and lib.progressBar(data)
+    or data.progressType == "circle" and lib.progressCircle(data)
+end
+
 exports("use", function(data, _)
     if Config.Items[data.name] then
+        if Config.Items[data.name].animation then
+            Config.Items[data.name].animation.label = Config.Items[data.name].animation.label or data.label
+            Config.Items[data.name].animation.progressType = Config.Items[data.name].animation.progressType or Config.ProgressType
+            if not progress(Config.Items[data.name].animation) then return end
+        end
         ox_inventory:useItem(data, function(cbData)
             if not cbData or not next(Config.Items[data.name].statusOnUse) or x_status then return end
             for status, amount in pairs(Config.Items[data.name].statusOnUse) do
