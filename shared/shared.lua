@@ -7,7 +7,7 @@ exports("add", function(itemToAdd)
     local invokingResource = GetInvokingResource()
     for itemName, data in pairs(itemToAdd) do
         if not Config.Items[itemName] then
-            data.resource = data.resource or invokingResource
+            data.resource = invokingResource
             Config.Items[itemName] = data
             if Config.Debug then print(("[%s]: Adding item %s to Config.Items table..."):format(currentResourceName:upper(), itemName)) end
         else
