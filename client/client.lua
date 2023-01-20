@@ -56,16 +56,21 @@ exports("use", function(data, _)
         if Config.Items[data.name].animation then
             Config.Items[data.name].animation.label = Config.Items[data.name].animation.label or data.label
             Config.Items[data.name].animation.progressType = Config.Items[data.name].animation.progressType or Config.ProgressType
-            if not progress(Config.Items[data.name].animation) then return end
+            if not progress(Config.Items[data.name].animation) then return lib.notify({title = Config.Locales.cancelled, type = "error"}) end
         end
         ox_inventory:useItem(data, function(cbData)
-            if not cbData or not next(Config.Items[data.name].statusOnUse) or x_status then return end
-            for status, amount in pairs(Config.Items[data.name].statusOnUse) do
-                if amount > 0 then
-                    increaseStatus(status, amount)
-                else
-                    decreaseStatus(status, -amount)
+            if not cbData then return end
+            if Config.Items[data.name].statusOnUse and next(Config.Items[data.name].statusOnUse) and not x_status then
+                for status, amount in pairs(Config.Items[data.name].statusOnUse) do
+                    if amount > 0 then
+                        increaseStatus(status, amount)
+                    else
+                        decreaseStatus(status, -amount)
+                    end
                 end
+            end
+            if Config.Items[data.name].clientOnUse then
+                Config.Items[data.name].clientOnUse()
             end
         end)
     end

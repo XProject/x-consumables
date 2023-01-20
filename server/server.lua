@@ -37,6 +37,10 @@ exports("use", function(event, item, inventory, slot, data)
                 end
             end
 
+            if Config.Items[item.name].serverOnUse then
+                Config.Items[item.name].serverOnUse()
+            end
+
             return
         end
     end

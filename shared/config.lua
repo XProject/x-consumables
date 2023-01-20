@@ -5,7 +5,8 @@ Config.Debug = false
 Config.ProgressType = "circle" -- "bar" or "circle"
 
 Config.Locales = {
-    using = "Using"
+    using = "Using",
+    cancelled = "Cancelled"
 }
 
 Config.Items = {
@@ -26,7 +27,19 @@ Config.Items = {
                 combat = nil or true | false,
                 mouse = nil or true | false
             }
-        } 
+        },
+        clientOnUse = function()
+            function(...)
+            exports[...]:(...)
+            TriggerEvent(...)
+            TriggerServerEvent(...)
+        end,
+        serverOnUse = function()
+            function(...)
+            exports[...]:(...)
+            TriggerEvent(...)
+            TriggerClientEvent(...)
+        end
     }
     ]]
     -- shared
