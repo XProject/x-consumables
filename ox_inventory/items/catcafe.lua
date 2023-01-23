@@ -180,8 +180,8 @@ return {
             export = 'x-consumables.use'
         }
     },
-    ['x_lolipop_catcafe'] = {
-        label = 'UwU Lolipop',
+    ['x_lollipop_catcafe'] = {
+        label = 'UwU Lollipop',
         weight = 250,
         stack = true,
         consume = 1,
