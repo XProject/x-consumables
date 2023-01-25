@@ -1,5 +1,5 @@
 ox_inventory = exports["ox_inventory"]
-x_status = IsDuplicityVersion() and exports["x-status"] or (GetResourceState("x-status"):find("start") and true) or nil
+x_status = IsDuplicityVersion() and (GetResourceState("x-status"):find("start") and exports["x-status"]) or (GetResourceState("x-status"):find("start") and true) or nil
 local currentResourceName = GetCurrentResourceName()
 
 exports("add", function(itemToAdd)

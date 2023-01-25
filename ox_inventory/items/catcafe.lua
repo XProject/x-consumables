@@ -208,9 +208,12 @@ return {
         label = 'Cat Cafe Menu',
         weight = 100,
         stack = true,
-        consume = 1,
+        consume = 0,
         client = {
-            export = 'x-restaurant.menu'
+            export = 'x-restaurant.use'
+        },
+        server = {
+            export = 'x-consumables.use'
         }
     },
     ['x_mochi_blueberry'] = {
