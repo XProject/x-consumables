@@ -1,5 +1,4 @@
-local currentResourceExport = exports[GetCurrentResourceName()]
-qb_inventory = GetResourceState("qb-inventory"):find("start") and true
+local currentResourceExport = exports[CurrentResourceName]
 
 RegisterNetEvent("x-consumables:qb:onItemUsed", function(itemData)
     if GetInvokingResource() then return end

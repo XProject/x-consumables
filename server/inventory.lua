@@ -1,6 +1,5 @@
-local currentResourceExport = exports[GetCurrentResourceName()]
+local currentResourceExport = exports[CurrentResourceName]
 local QBCore = GetResourceState("qb-inventory"):find("start") and exports["qb-core"]:GetCoreObject()
-local qb_inventory = GetResourceState("qb-inventory"):find("start") and exports["qb-inventory"]
 Inventory = {}
 
 function Inventory.CreateUseableItem(itemName, data)

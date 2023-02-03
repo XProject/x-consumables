@@ -1,8 +1,9 @@
 local isServer = IsDuplicityVersion()
-local currentResourceName = GetCurrentResourceName()
+CurrentResourceName = GetCurrentResourceName()
 
 ox_inventory = GetResourceState("ox_inventory"):find("start") and exports["ox_inventory"] or nil
-x_status = isServer and (GetResourceState("x-status"):find("start") and exports["x-status"]) or (GetResourceState("x-status"):find("start") and true) or nil
+qb_inventory = ((isServer and GetResourceState("qb-inventory"):find("start")) and exports["qb-inventory"]) or ((not isServer and GetResourceState("qb-inventory"):find("start")) and true) or nil
+x_status = ((isServer and GetResourceState("x-status"):find("start")) and exports["x-status"]) or ((not isServer and GetResourceState("x-status"):find("start")) and true) or nil
 
 exports("add", function(itemToAdd)
     if type(itemToAdd) ~= "table" then return print("Error in type of passed parameter to exports[\"x-consumables\"]:add") end
