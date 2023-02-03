@@ -1,6 +1,14 @@
----@diagnostic disable: redefined-local
+---@diagnostic disable: redefined-local, cast-local-type
 local esx = GetResourceState("es_extended"):find("start") and true or nil
 local qb = GetResourceState("qb-core"):find("start") and true or nil
+
+if qb then
+    qb = exports['qb-core']:GetCoreObject()
+    qb = {
+        GetHunger = function() return qb.Functions.GetPlayerData()?.metadata["hunger"] or 0.0 end,
+        GetThirst = function() return qb.Functions.GetPlayerData()?.metadata["thirst"] or 0.0 end
+    }
+end
 
 local function increaseStatus(statusName, amountToIncrease)
     if statusName ~= "Hunger" and statusName ~= "Thirst" and statusName ~= "Stress" then return end
@@ -8,9 +16,9 @@ local function increaseStatus(statusName, amountToIncrease)
         TriggerEvent("esx_status:add", statusName:lower(), amountToIncrease * 10000)
     elseif qb then
         if statusName == "Hunger" then
-            TriggerServerEvent("consumables:server:addHunger", amountToIncrease)
+            TriggerServerEvent("consumables:server:addHunger", qb.GetHunger() + amountToIncrease)
         elseif statusName == "Thirst" then
-            TriggerServerEvent("consumables:server:addThirst", amountToIncrease)
+            TriggerServerEvent("consumables:server:addThirst", qb.GetThirst() + amountToIncrease)
         elseif statusName == "Stress" then
             TriggerServerEvent("hud:server:GainStress", amountToIncrease)
         end
@@ -23,9 +31,9 @@ local function decreaseStatus(statusName, amountToDecrease)
         TriggerEvent("esx_status:remove", statusName:lower(), amountToDecrease * 10000)
     elseif qb then
         if statusName == "Hunger" then
-            TriggerServerEvent("consumables:server:addHunger", -amountToDecrease)
+            TriggerServerEvent("consumables:server:addHunger",  qb.GetHunger() + -amountToDecrease)
         elseif statusName == "Thirst" then
-            TriggerServerEvent("consumables:server:addThirst", -amountToDecrease)
+            TriggerServerEvent("consumables:server:addThirst", qb.GetThirst() + -amountToDecrease)
         elseif statusName == "Stress" then
             TriggerServerEvent("hud:server:RelieveStress", amountToDecrease)
         end
@@ -42,13 +50,28 @@ local function progress(data)
         allowRagdoll = false,
         allowCuffed = false,
         allowFalling = false,
-        canCancel = (data.canCancel == nil and true) or data.canCancel, -- so weird; it won't work properly if it's not written like this...
+        canCancel = (data.canCancel == nil and true) or data.canCancel,
         anim = data.anim,
         prop = data.prop,
         disable = data.disable
     }
     return data.progressType == "bar" and lib.progressBar(data)
     or data.progressType == "circle" and lib.progressCircle(data)
+end
+
+local function onItemUsed(data)
+    if Config.Items[data.name].statusOnUse and next(Config.Items[data.name].statusOnUse) and not x_status then
+        for status, amount in pairs(Config.Items[data.name].statusOnUse) do
+            if amount > 0 then
+                increaseStatus(status, amount)
+            else
+                decreaseStatus(status, -amount)
+            end
+        end
+    end
+    if Config.Items[data.name].clientOnUse then
+        Config.Items[data.name].clientOnUse()
+    end
 end
 
 exports("use", function(data, _)
@@ -58,20 +81,13 @@ exports("use", function(data, _)
             Config.Items[data.name].animation.progressType = Config.Items[data.name].animation.progressType or Config.ProgressType
             if not progress(Config.Items[data.name].animation) then return lib.notify({title = Config.Locales.cancelled, type = "error"}) end
         end
-        ox_inventory:useItem(data, function(cbData)
-            if not cbData then return end
-            if Config.Items[data.name].statusOnUse and next(Config.Items[data.name].statusOnUse) and not x_status then
-                for status, amount in pairs(Config.Items[data.name].statusOnUse) do
-                    if amount > 0 then
-                        increaseStatus(status, amount)
-                    else
-                        decreaseStatus(status, -amount)
-                    end
-                end
-            end
-            if Config.Items[data.name].clientOnUse then
-                Config.Items[data.name].clientOnUse()
-            end
-        end)
+        if ox_inventory then
+            ox_inventory:useItem(data, function(cbData)
+                if not cbData then return end
+                onItemUsed(data)
+            end)
+        elseif qb_inventory then
+            onItemUsed(data)
+        end
     end
 end)

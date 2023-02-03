@@ -1,4 +1,4 @@
-exports("use", function(event, item, inventory, slot, data)
+exports("use", function(event, item, inventory, _, _)
     if Config.Items[item.name] then
         if event == "usedItem" then
             if Config.Items[item.name].statusOnUse and next(Config.Items[item.name].statusOnUse) and x_status then
