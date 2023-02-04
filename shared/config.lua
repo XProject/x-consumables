@@ -2,7 +2,9 @@ Config = {}
 
 Config.Debug = false
 
-Config.ProgressType = "circle" -- "bar" or "circle"
+Config.UseTime = 10000 -- default useTime
+
+Config.ProgressType = "circle" -- default progressType => "bar" or "circle"
 
 Config.Locales = {
     using = "Using",
@@ -18,7 +20,7 @@ Config.Items = {
         animation   = nil or {
             anim = nil or { dict = "ANIM_DICTIONARY", clip = "ANIM_CLIPSET" } or { scenario = "ANIM_SCENARIO" },
             prop = nil or { model = `MODEL_NAME`, bone = BONE_INDEX, pos = vec3(x, y, z), rot = vec3(x, y, z) } or {{model = `MODEL_NAME_1`, bone = BONE_INDEX_1, pos = vec3(x1, y1, z1), rot = vec3(x1, y1, z1)}, {model = `MODEL_NAME_2`, bone = BONE_INDEX_2, pos = vec3(x2, y2, z2), rot = vec3(x2, y2, z2)}, etc},
-            useTime = nil or DURATION_IN_MILLISECOND,
+            useTime = nil or DURATION_IN_MILLISECOND, -- Overrides Config.UseTime for current item
             canCancel = nil or true | false,
             progressType = nil or "bar" or "circle", -- Overrides Config.ProgressType for current item
             disable = nil or {

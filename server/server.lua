@@ -14,11 +14,11 @@ exports("use", function(event, item, inventory, _, _)
             if Config.Items[item.name].itemOnUse and next(Config.Items[item.name].itemOnUse) then
                 for itemName, itemAmount in pairs(Config.Items[item.name].itemOnUse) do
                     if itemAmount > 0 then
-                        ox_inventory:AddItem(inventory.id, itemName, itemAmount)
+                        Inventory.AddItem(inventory.id, itemName, itemAmount)
                     elseif itemAmount < 0 then
-                        local itemCount = ox_inventory:Search(inventory.id, 'count', itemName)
+                        local itemCount = Inventory.Search(inventory.id, itemName)
                         if itemCount and itemCount > 0 then
-                            ox_inventory:RemoveItem(inventory.id, itemName, itemCount > -itemAmount and -itemAmount or itemCount)
+                            Inventory.RemoveItem(inventory.id, itemName, itemCount > -itemAmount and -itemAmount or itemCount)
                         end
                     end
                 end
