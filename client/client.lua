@@ -13,7 +13,7 @@ end
 
 local function increaseStatus(statusName, amountToIncrease)
     if x_status then
-        exports["x-status"]:increase(statusName, amountToIncrease, true)
+        x_status:increase(statusName, amountToIncrease, true)
     else
         if statusName ~= "Hunger" and statusName ~= "Thirst" and statusName ~= "Stress" then return end
         if esx then
@@ -32,7 +32,7 @@ end
 
 local function decreaseStatus(statusName, amountToDecrease)
     if x_status then
-        exports["x-status"]:decrease(statusName, amountToDecrease, true)
+        x_status:decrease(statusName, amountToDecrease, true)
     else
         if statusName ~= "Hunger" and statusName ~= "Thirst" and statusName ~= "Stress" then return end
         if esx then
