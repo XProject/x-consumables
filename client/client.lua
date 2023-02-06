@@ -90,9 +90,9 @@ exports("use", function(data, _)
         if Config.Items[data.name].animation then
             Config.Items[data.name].animation.label = Config.Items[data.name].animation.label or data.label
             Config.Items[data.name].animation.progressType = Config.Items[data.name].animation.progressType or Config.ProgressType
-            SetInventoryAccess(false)
+            Inventory.setInventoryAccess(false)
             local progress = progress(Config.Items[data.name].animation)
-            SetInventoryAccess(true)
+            Inventory.setInventoryAccess(true)
             if not progress then return response, lib.notify({title = Config.Locales.cancelled, type = "error"}) end
         end
         if ox_inventory then

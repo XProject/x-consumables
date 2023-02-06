@@ -1,8 +1,6 @@
-local currentResourceExport = exports[CurrentResourceName]
 local QBCore = GetResourceState("qb-inventory"):find("start") and exports["qb-core"]:GetCoreObject()
-Inventory = {}
 
-function Inventory.AddItem(source, itemName, itemAmount)
+function Inventory.addItem(source, itemName, itemAmount)
     local response
     if ox_inventory then
         response = ox_inventory:AddItem(source, itemName, itemAmount)
@@ -13,7 +11,7 @@ function Inventory.AddItem(source, itemName, itemAmount)
     return response
 end
 
-function Inventory.RemoveItem(source, itemName, itemAmount)
+function Inventory.removeItem(source, itemName, itemAmount)
     local response
     if ox_inventory then
         response = ox_inventory:RemoveItem(source, itemName, itemAmount)
@@ -24,7 +22,7 @@ function Inventory.RemoveItem(source, itemName, itemAmount)
     return response
 end
 
-function Inventory.Search(source, itemName)
+function Inventory.search(source, itemName)
     local response
     if ox_inventory then
         response = ox_inventory:Search(source, 'count', itemName)
@@ -51,18 +49,20 @@ function Inventory.Search(source, itemName)
     return response
 end
 
-function Inventory.CreateUseableItem(itemName, data)
-    if not qb_inventory then return end
-    qb_inventory:CreateUsableItem(itemName, data and function(source, item)
-        local time = tostring(os.time())
-        Player(source).state:set(time, true, true)
-        TriggerClientEvent("x-consumables:qb:onItemUsed", source, {name = item.name, label = item.label, time = time})
-        SetTimeout(Config.Items[item.name].animation?.useTime or Config.UseTime, function()
-            if not Player(source).state[time] then return end
-            Inventory.RemoveItem(source, item.name, 1)
-            currentResourceExport:use("usedItem", {name = item.name}, {id = source})
-        end)
-    end or nil)
+function Inventory.createUseableItem(itemName, data)
+    if qb_inventory then
+        qb_inventory:CreateUsableItem(itemName, data and function(source, item)
+            local time = tostring(os.time())
+            Player(source).state:set(time, true, true)
+            TriggerClientEvent("x-consumables:qb:onItemUsed", source, {name = item.name, label = item.label, time = time})
+            SetTimeout(Config.Items[item.name].animation?.useTime or Config.UseTime, function()
+                if not Player(source).state[time] then return end
+                Player(source).state:set(time, nil, true)
+                Inventory.removeItem(source, item.name, 1)
+                CurrentResourceExport:use("usedItem", {name = item.name}, {id = source})
+            end)
+        end or nil)
+    end
 end
 
 AddEventHandler("QBCore:Server:UpdateObject", function()

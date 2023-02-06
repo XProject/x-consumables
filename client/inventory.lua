@@ -1,6 +1,4 @@
-local currentResourceExport = exports[CurrentResourceName]
-
-function SetInventoryAccess(access)
+function Inventory.setInventoryAccess(access)
     if qb_inventory then
         LocalPlayer.state:set("inv_busy", not access, true)
         TriggerEvent("inventory:client:busy:status", not access)
@@ -10,7 +8,7 @@ end
 
 RegisterNetEvent("x-consumables:qb:onItemUsed", function(itemData)
     if GetInvokingResource() then return end
-    if not currentResourceExport:use(itemData) then
+    if not CurrentResourceExport:use(itemData) then
         LocalPlayer.state:set(itemData.time, nil, true)
     end
 end)
