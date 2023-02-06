@@ -12,31 +12,39 @@ if qb then
 end
 
 local function increaseStatus(statusName, amountToIncrease)
-    if statusName ~= "Hunger" and statusName ~= "Thirst" and statusName ~= "Stress" then return end
-    if esx then
-        TriggerEvent("esx_status:add", statusName:lower(), amountToIncrease * 10000)
-    elseif qb then
-        if statusName == "Hunger" then
-            TriggerServerEvent("consumables:server:addHunger", qb.GetHunger() + amountToIncrease)
-        elseif statusName == "Thirst" then
-            TriggerServerEvent("consumables:server:addThirst", qb.GetThirst() + amountToIncrease)
-        elseif statusName == "Stress" then
-            TriggerServerEvent("hud:server:GainStress", amountToIncrease)
+    if x_status then
+        exports["x-status"]:increase(statusName, amountToIncrease, true)
+    else
+        if statusName ~= "Hunger" and statusName ~= "Thirst" and statusName ~= "Stress" then return end
+        if esx then
+            TriggerEvent("esx_status:add", statusName:lower(), amountToIncrease * 10000)
+        elseif qb then
+            if statusName == "Hunger" then
+                TriggerServerEvent("consumables:server:addHunger", qb.GetHunger() + amountToIncrease)
+            elseif statusName == "Thirst" then
+                TriggerServerEvent("consumables:server:addThirst", qb.GetThirst() + amountToIncrease)
+            elseif statusName == "Stress" then
+                TriggerServerEvent("hud:server:GainStress", amountToIncrease)
+            end
         end
     end
 end
 
 local function decreaseStatus(statusName, amountToDecrease)
-    if statusName ~= "Hunger" and statusName ~= "Thirst" and statusName ~= "Stress" then return end
-    if esx then
-        TriggerEvent("esx_status:remove", statusName:lower(), amountToDecrease * 10000)
-    elseif qb then
-        if statusName == "Hunger" then
-            TriggerServerEvent("consumables:server:addHunger",  qb.GetHunger() + -amountToDecrease)
-        elseif statusName == "Thirst" then
-            TriggerServerEvent("consumables:server:addThirst", qb.GetThirst() + -amountToDecrease)
-        elseif statusName == "Stress" then
-            TriggerServerEvent("hud:server:RelieveStress", amountToDecrease)
+    if x_status then
+        exports["x-status"]:decrease(statusName, amountToDecrease, true)
+    else
+        if statusName ~= "Hunger" and statusName ~= "Thirst" and statusName ~= "Stress" then return end
+        if esx then
+            TriggerEvent("esx_status:remove", statusName:lower(), amountToDecrease * 10000)
+        elseif qb then
+            if statusName == "Hunger" then
+                TriggerServerEvent("consumables:server:addHunger",  qb.GetHunger() + -amountToDecrease)
+            elseif statusName == "Thirst" then
+                TriggerServerEvent("consumables:server:addThirst", qb.GetThirst() + -amountToDecrease)
+            elseif statusName == "Stress" then
+                TriggerServerEvent("hud:server:RelieveStress", amountToDecrease)
+            end
         end
     end
 end
@@ -82,7 +90,10 @@ exports("use", function(data, _)
         if Config.Items[data.name].animation then
             Config.Items[data.name].animation.label = Config.Items[data.name].animation.label or data.label
             Config.Items[data.name].animation.progressType = Config.Items[data.name].animation.progressType or Config.ProgressType
-            if not progress(Config.Items[data.name].animation) then return response, lib.notify({title = Config.Locales.cancelled, type = "error"}) end
+            SetInventoryAccess(false)
+            local progress = progress(Config.Items[data.name].animation)
+            SetInventoryAccess(true)
+            if not progress then return response, lib.notify({title = Config.Locales.cancelled, type = "error"}) end
         end
         if ox_inventory then
             ox_inventory:useItem(data, function(cbData)
@@ -95,3 +106,6 @@ exports("use", function(data, _)
     end
     return response
 end)
+
+exports("increaseStatus", increaseStatus)
+exports("decreaseStatus", decreaseStatus)
