@@ -58,7 +58,7 @@ function Inventory.createUseableItem(itemName, data)
             SetTimeout(Config.Items[item.name].animation?.useTime or Config.UseTime, function()
                 if not Player(source).state[time] then return end
                 Player(source).state:set(time, nil, true)
-                Inventory.removeItem(source, item.name, 1)
+                if item.useable then Inventory.removeItem(source, item.name, 1) end
                 CurrentResourceExport:use("usedItem", {name = item.name}, {id = source})
             end)
         end or nil)
