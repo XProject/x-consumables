@@ -8,6 +8,7 @@ version "0.0.0"
 
 dependencies {
 	"ox_lib",
+    "x-status" -- comment this if you are not using x-status
 }
 
 shared_scripts {
