@@ -16,9 +16,9 @@ exports("add", function(itemToAdd)
             data.resource = invokingResource
             Config.Items[itemName] = data
             if isServer then Inventory.createUseableItem(itemName, true) end
-            if Config.Debug then print(("^7[^2%s^7]: Adding item ^5%s^7 to Config.Items table..."):format(currentResourceName:upper(), itemName)) end
+            if Config.Debug then print(("^7[^2%s^7]: Adding item ^5%s^7 to Config.Items table..."):format(CurrentResourceName:upper(), itemName)) end
         else
-            if Config.Debug then print(("^7[^2%s^7]: Item ^5%s^7 already exists in Config.Items table, so it won't be overrided..."):format(currentResourceName:upper(), itemName)) end
+            if Config.Debug then print(("^7[^2%s^7]: Item ^5%s^7 already exists in Config.Items table, so it won't be overrided..."):format(CurrentResourceName:upper(), itemName)) end
         end
     end
     ---@diagnostic disable-next-line: cast-local-type
@@ -30,7 +30,7 @@ local function onResourceStop(resource)
         if data.resource and data.resource == resource then
             Config.Items[itemName] = nil
             if isServer then Inventory.createUseableItem(itemName, false) end
-            if Config.Debug then print(("^7[^2%s^7]: Removing item ^5%s^7 from Config.Items table..."):format(currentResourceName:upper(), itemName)) end
+            if Config.Debug then print(("^7[^2%s^7]: Removing item ^5%s^7 from Config.Items table..."):format(CurrentResourceName:upper(), itemName)) end
         end
     end
 end
